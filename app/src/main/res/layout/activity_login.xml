@@ -40,7 +40,8 @@
                 android:layout_marginRight="30dp"
                 android:layout_weight="7"
                 android:backgroundTint="#fbc22c"
-                android:textSize="15sp" />
+                android:textSize="15sp"
+                android:textColor="#ffffff"/>
 
 
         </LinearLayout>
@@ -68,7 +69,8 @@
                 android:layout_weight="7"
                 android:backgroundTint="#fbc22c"
                 android:inputType="textPassword"
-                android:textSize="15sp" />
+                android:textSize="15sp"
+                android:textColor="#ffffff"/>
 
         </LinearLayout>
 

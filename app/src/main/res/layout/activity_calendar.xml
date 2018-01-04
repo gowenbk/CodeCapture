@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/login_background"
+        android:layout_height="50dp"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+        <Button
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00ffffff"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:text="⬅  Main"/>
+    </LinearLayout>
+    <com.prolificinteractive.materialcalendarview.MaterialCalendarView xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/calendarView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mcv_showOtherDates="all"
+        app:mcv_selectionColor="#00F" />
+
+    <ScrollView
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/table_border">
+            <TableRow>
+                <TextView
+                    android:text="언어타입"
+                    android:layout_marginLeft="10dp"/>
+                <TextView
+                    android:layout_marginLeft="20dp"
+                    android:text="제목 와라라라라라라라라라라라라라라라라라라"/>
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+</LinearLayout>

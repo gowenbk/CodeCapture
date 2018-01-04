@@ -35,7 +35,8 @@
     <TableLayout
         android:layout_marginTop="20dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        >
         <!--제목-->
         <TableRow>
                 <ImageView
@@ -50,7 +51,7 @@
                     android:textSize="18sp"
                     android:text="title : "/>
                 <TextView
-                    android:id="@+id/c_title"
+                    android:id="@+id/s_title"
                     android:layout_marginLeft="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -72,7 +73,7 @@
                 android:textSize="18sp"
                 android:text="folder : "/>
             <TextView
-                android:id="@+id/c_folder"
+                android:id="@+id/s_folder"
                 android:layout_marginLeft="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -94,7 +95,7 @@
                 android:textSize="18sp"
                 android:text="language : "/>
             <TextView
-                android:id="@+id/c_language"
+                android:id="@+id/s_language"
                 android:layout_marginLeft="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -116,7 +117,7 @@
                 android:textSize="18sp"
                 android:text="tag : "/>
             <TextView
-                android:id="@+id/c_tag"
+                android:id="@+id/s_tag"
                 android:layout_marginLeft="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -138,7 +139,7 @@
                 android:textSize="18sp"
                 android:text="date : "/>
             <TextView
-                android:id="@+id/c_date"
+                android:id="@+id/s_date"
                 android:layout_marginLeft="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -160,7 +161,7 @@
                 android:textSize="18sp"
                 android:text="sender : "/>
             <TextView
-                android:id="@+id/c_sender"
+                android:id="@+id/s_sender"
                 android:layout_marginLeft="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -191,7 +192,7 @@
                 android:text="receiver : "/>
         </LinearLayout>
         <EditText
-            android:id="@+id/c_receiver"
+            android:id="@+id/s_receiver"
             android:layout_marginLeft="30dp"
             android:layout_width="325dp"
             android:layout_height="wrap_content"

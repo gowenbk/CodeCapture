@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--제목 및 폴더-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/login_background">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="#00ffffff"
+            android:text="⬅  Main"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:onClick="goBack"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/c_title"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:hint="  title" />
+
+        <Spinner
+            android:id="@+id/c_folder"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+    <!--언어 선택-->
+    <LinearLayout
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_marginTop="7dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textSize="16dp"
+            android:text="Language : " />
+
+        <RadioGroup
+            android:id="@+id/c_language"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <RadioButton
+                android:id="@+id/java"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Java" />
+            <RadioButton
+                android:id="@+id/python"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Python" />
+            <RadioButton
+                android:id="@+id/html"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Html" />
+            <RadioButton
+                android:id="@+id/etc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="etc" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <!--코드입력-->
+    <TextView
+        android:layout_marginTop="7dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:textSize="16dp"
+        android:text="Code : " />
+    <EditText
+        android:id="@+id/c_code"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:minLines="8"
+        android:gravity="top"
+        android:singleLine="false"
+        android:background="#000000"
+        android:textColor="#ffffff"
+        />
+
+    <!--태그 입력-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:text="Tag" />
+        <ImageView
+            android:layout_marginTop="13dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/tag"/>
+        <EditText
+            android:id="@+id/c_tag"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:hint="  tags (#a#b)" />
+    </LinearLayout>
+
+    <!--메모 입력-->
+    <EditText
+        android:id="@+id/c_comment"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:minLines="5"
+        android:gravity="top"
+        android:singleLine="false"
+        android:background="#50B8C0C9"
+        android:hint="Memo"
+    />
+
+    <!--출처 입력-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:text="Ref : " />
+        <EditText
+            android:id="@+id/c_ref"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:hint="  reference of code" />
+    </LinearLayout>
+
+    <!--날짜 입력-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:text="Date : " />
+        <TextView
+            android:id="@+id/c_date"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="15dp"
+            />
+    </LinearLayout>
+
+    <!--즐겨찾기 입력-->
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:text="Favorite : " />
+        <ToggleButton
+            android:layout_marginLeft="10dp"
+            android:id="@+id/c_star"
+            android:layout_width="30dp"
+            android:layout_height="20dp"
+            android:background="@drawable/toggle_selector"
+            android:checked="false"
+            android:textOn=""
+            android:textOff=""
+            />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/write"
+        android:layout_width="match_parent"
+        android:layout_height="25sp"
+        android:layout_marginLeft="15sp"
+        android:layout_marginRight="15sp"
+        android:layout_marginTop="30sp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/btn_corner_rounded"
+        android:backgroundTint="@color/colorRadioButton"
+        android:text="Write"
+        android:textColor="#ffffff"
+        android:textSize="15sp" />
+</LinearLayout>
+</ScrollView>
