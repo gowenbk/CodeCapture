@@ -29,7 +29,6 @@ public class WriteActivity extends AppCompatActivity {
     private RadioGroup c_language;
     private EditText c_comment;
     private EditText c_tag;
-    private EditText c_memo;
     private EditText c_ref;
     private TextView c_date;
     private ToggleButton c_star;
@@ -43,9 +42,8 @@ public class WriteActivity extends AppCompatActivity {
         c_title = findViewById(R.id.c_title);
         c_folder = findViewById(R.id.c_folder);
         c_language = findViewById(R.id.c_language);
-        c_comment = findViewById(R.id.c_comment);
         c_tag = findViewById(R.id.c_tag);
-        c_memo = findViewById(R.id.c_memo);
+        c_comment = findViewById(R.id.c_comment);
         c_ref = findViewById(R.id.c_ref);
         c_date = findViewById(R.id.c_date);
         c_star = findViewById(R.id.c_star);
