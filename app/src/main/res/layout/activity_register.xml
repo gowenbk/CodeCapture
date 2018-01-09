@@ -38,7 +38,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/id"
         android:layout_width="215dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -66,7 +66,7 @@
         android:text="EMAIL CHECK"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
+        app:layout_constraintTop_toBottomOf="@+id/id" />
 
     <Button
         android:id="@+id/button2"
@@ -79,10 +79,10 @@
         android:text="Certify Check"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/editText5" />
+        app:layout_constraintTop_toBottomOf="@+id/certifynumber" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/name"
         android:layout_width="215dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -106,9 +106,9 @@
         android:layout_marginTop="8dp"
         android:text="Password"
         android:textColor="#95ffffff"
-        app:layout_constraintBottom_toTopOf="@+id/editText3"
+        app:layout_constraintBottom_toTopOf="@+id/password"
         app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/editText2" />
+        app:layout_constraintTop_toBottomOf="@+id/name" />
 
     <TextView
         android:id="@+id/textView4"
@@ -117,12 +117,12 @@
         android:layout_marginTop="8dp"
         android:text="Password Check"
         android:textColor="#95ffffff"
-        app:layout_constraintBottom_toTopOf="@+id/editText4"
+        app:layout_constraintBottom_toTopOf="@+id/passwordcheck"
         app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/editText3" />
+        app:layout_constraintTop_toBottomOf="@+id/password" />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/password"
         android:layout_width="215dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -137,10 +137,10 @@
         android:textSize="15sp"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/editText2" />
+        app:layout_constraintTop_toBottomOf="@+id/name" />
 
     <EditText
-        android:id="@+id/editText4"
+        android:id="@+id/passwordcheck"
         android:layout_width="215dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -155,7 +155,7 @@
         android:textSize="15sp"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/editText3" />
+        app:layout_constraintTop_toBottomOf="@+id/password" />
 
     <TextView
         android:id="@+id/textView5"
@@ -164,7 +164,7 @@
         android:layout_marginTop="8dp"
         android:text="Name"
         android:textColor="#95ffffff"
-        app:layout_constraintBottom_toTopOf="@+id/editText2"
+        app:layout_constraintBottom_toTopOf="@+id/name"
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/button2" />
 
@@ -179,11 +179,11 @@
         android:textColor="#fbc22c"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/editText4" />
+        app:layout_constraintTop_toBottomOf="@+id/passwordcheck" />
 
     <Button
         android:background="@drawable/btn_stroke"
-        android:id="@+id/button3"
+        android:id="@+id/register"
         android:layout_width="215dp"
         android:layout_height="40dp"
         android:layout_marginBottom="8dp"
@@ -197,7 +197,7 @@
         app:layout_constraintTop_toBottomOf="@+id/checkBox" />
 
     <EditText
-        android:id="@+id/editText5"
+        android:id="@+id/certifynumber"
         android:layout_width="215dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
