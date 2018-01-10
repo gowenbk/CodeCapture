@@ -213,6 +213,7 @@
 
     <Button
         android:id="@+id/write"
+        android:onClick="writeCode"
         android:layout_width="match_parent"
         android:layout_height="25sp"
         android:layout_marginLeft="15sp"

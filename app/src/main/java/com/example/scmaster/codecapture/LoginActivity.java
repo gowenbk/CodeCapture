@@ -9,6 +9,17 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -37,23 +48,49 @@ public class LoginActivity extends AppCompatActivity{
             public void onClick(View view) {
                 email = mail.getText().toString();
                 password = pw.getText().toString();
-                Map<String, String> params = new HashMap<>();
-                params.put("email", email);
-                params.put("password", password);
-                try {
-                    String result = new NetworkTask().execute(params).get();
-                    if(result.equals("true")){
-                        //로그인 성공 시
-                    }
-                }catch(Exception e){
 
-                }
+                new Thread(){
+                        public void run(){
+                            try {
+                                new Thread() {
+                                    public void run() {
+                                        String result = populate();
+                                        if(result.equals("true")){
+                                            //로그인 성공
+                                        }
+                                    }
+                                }.start();
+                               /* String result = new NetworkTask().execute(params).get();
+                                if (result.equals("true")) {
+                                    //로그인 성공 시
+                                }*/
+                            }catch(Exception e){}
+                        }
+                }.start();
             }
         });
-
     }
 
-    public class NetworkTask extends AsyncTask<Map<String, String>, Integer, String> {
+    private String populate(){
+        String next = null;
+        try {
+            URL url = new URL("http://10.10.16.129:8081/cc/login?email="+email+"&password="+password);
+            HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
+            urlConnection.setRequestMethod("GET");
+            urlConnection.connect();
+
+            BufferedReader bufferedReader =
+                    new BufferedReader(new InputStreamReader(urlConnection.getInputStream()));
+            next = bufferedReader.readLine();
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return next;
+    }
+
+   /* public class NetworkTask extends AsyncTask<Map<String, String>, Integer, String> {
 
         @Override
         protected String doInBackground(Map<String, String>... maps) { // 내가 전송하고 싶은 파라미터
@@ -77,5 +114,5 @@ public class LoginActivity extends AppCompatActivity{
             return body;
         }
 
-    }
+    }*/
 }

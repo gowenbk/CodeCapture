@@ -30,17 +30,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <TableLayout
+            android:id="@+id/table"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/table_border">
-            <TableRow>
-                <TextView
-                    android:text="언어타입"
-                    android:layout_marginLeft="10dp"/>
-                <TextView
-                    android:layout_marginLeft="20dp"
-                    android:text="제목 와라라라라라라라라라라라라라라라라라라"/>
-            </TableRow>
         </TableLayout>
     </ScrollView>
 </LinearLayout>
