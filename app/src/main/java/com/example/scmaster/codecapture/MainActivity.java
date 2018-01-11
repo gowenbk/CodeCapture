@@ -246,7 +246,7 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
-    final Handler handler = new Handler() {
+    Handler handler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
             if(msg.what == 1){
@@ -274,7 +274,7 @@ public class MainActivity extends AppCompatActivity
                 System.out.println((Code)msg.obj);
 
                 Intent intent = new Intent(MainActivity.this, CodedetailActivity.class);
-                intent.putExtra("codeDetail", (Code)msg.obj);
+//                intent.putExtra("codeDetail", (Code)msg.obj);
                 startActivity(intent);
             }
         }
