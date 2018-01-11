@@ -1,5 +1,6 @@
 package com.example.scmaster.codecapture;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
@@ -7,6 +8,10 @@ import java.util.ArrayList;
  */
 
 public class Code {
+
+/**
+ * Created by SCMaster on 2018-01-08.
+ */
 
     private int c_num;
     private String c_title;

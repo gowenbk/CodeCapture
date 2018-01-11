@@ -51,6 +51,14 @@ public class WriteActivity extends AppCompatActivity {
     private ToggleButton star;
 
     private int[] folderIndex;
+    private EditText c_title;
+    private Spinner c_folder;
+    private RadioGroup c_language;
+    private EditText c_comment;
+    private EditText c_tag;
+    private EditText c_ref;
+    private TextView c_date;
+    private ToggleButton c_star;
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
@@ -86,6 +94,21 @@ public class WriteActivity extends AppCompatActivity {
                 handler.sendMessage(message);
             }
         }.start();
+        c_title = findViewById(R.id.c_title);
+        c_folder = findViewById(R.id.c_folder);
+        c_language = findViewById(R.id.c_language);
+        c_tag = findViewById(R.id.c_tag);
+        c_comment = findViewById(R.id.c_comment);
+        c_ref = findViewById(R.id.c_ref);
+        c_date = findViewById(R.id.c_date);
+        c_star = findViewById(R.id.c_star);
+
+        //폴더명 셋팅
+        ArrayList<String> entries =  new ArrayList<>();
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                R.array.planets_array, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        c_folder.setAdapter(adapter);
 
         //날짜 셋팅
         final Calendar caldate = Calendar.getInstance();

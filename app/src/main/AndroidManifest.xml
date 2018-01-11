@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".CalendarActivity">
+            android:name=".ShareConfirmActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -19,6 +19,10 @@
         <activity android:name=".LoginActivity"/>
         <activity android:name=".WriteActivity"/>
         <activity android:name=".ShareActivity"/>
+        <activity android:name=".CalendarActivity"/>
+        <activity android:name=".RegisterActivity"/>
+        <activity android:name=".CodedetailActivity"/>
+        <activity android:name=".ManageInfoActivity"/>
     </application>
 
 
